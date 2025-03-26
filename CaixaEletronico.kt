@@ -3,18 +3,32 @@ import kotlin.system.exitProcess
 var saldo = 100.5 // Float
 
 fun main() {
+    print("Digite o seu nome: ")
+    val nome = readln()
+    println("Olá $nome, é um prazer ter você por aqui!")
+
     inicio()
 }
 
 fun inicio() {
-    val escolha = readLine()?.toIntOrNull()
+    while (true) {
 
-    when (escolha) {
-        1 -> verSaldo()
-        2 -> fazerDeposito()
-        3 -> fazerSaque()
-        4 -> sair()
-        else -> erro()
+        println("""
+            Selecione uma opção :
+            1.Ver Saldo.
+            2.Fazer Deposito.
+            3.Fazer Saque.
+            4.Sair.
+        """.trimIndent())
+        val escolha = readln().toIntOrNull()
+
+        when (escolha) {
+            1 -> verSaldo()
+            2 -> fazerDeposito()
+            3 -> fazerSaque()
+            4 -> sair()
+            else -> erro()
+        }
     }
 }
 
@@ -25,7 +39,7 @@ fun verSaldo() {
 
 fun fazerDeposito() {
     print("Qual o valor para depósito? ")
-    val deposito = readLine()?.toFloatOrNull()
+    val deposito = readln().toFloatOrNull()
 
     if (deposito == null) {
         println("Por favor, informe um número válido.")
@@ -38,7 +52,7 @@ fun fazerDeposito() {
 
 fun fazerSaque() {
     print("Qual o valor para saque? ")
-    val saque = readLine()?.toFloatOrNull()
+    val saque = readln().toFloatOrNull()
 
     if (saque == null) {
         println("Por favor, informe um número válido.")
@@ -56,10 +70,10 @@ fun erro() {
 
 fun sair() {
     print("Você deseja sair? (S/N) ")
-    val confirma = readLine()?.toUpperCase()
+    val confirma = readln()
 
     when (confirma) {
-        "S" -> exitProcess(0)
+        ("S") -> exitProcess(0)
         "N" -> inicio()
         else -> sair()
     }

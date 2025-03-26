@@ -1,8 +1,8 @@
 Agora é hora de pensar!
 Com o projeto do caixa eletrônico, encontramos algumas questões que são muito importantes, mas não foram aplicadas. Vamos aplicá-las uma a uma.
-Ao acessar o sistema, pergunte o nome do usuário e diga "Olá {Nome} é um prazer ter você por aqui!"
+Ao acessar o sistema, pergunte o nome do usuário e diga "Olá {Nome} é um prazer ter você por aqui!"✅
 
-Na função "inicio", utilize escolha/caso (switch/case) para validar a opção escolhida pelo usuário.
+Na função "inicio", utilize escolha/caso (switch/case) para validar a opção escolhida pelo usuário.✅
 
 Sempre que o usuário for sacar dinheiro, o valor restante não pode ser negativo, ou seja, caso o usuário tente sacar mais do que tem em saldo, a ação não deve ocorrer. Exiba uma mensagem de "Operação não autorizada".
 
